@@ -1,11 +1,15 @@
-import React from 'react'
-import Logo from '../components/nav/Logo'
+import React, { useEffect } from 'react'
+import MainLayout from '../components/main/Layout'
+import Works from '../works'
 
-function HomePg (){
+function HomePg () {
+
+	useEffect(() => {
+		document.body.classList.value = 'light'
+	}, [])
+
 	return (
-		<div>
-			<Logo></Logo>
-		</div>
+		<MainLayout works={Works}></MainLayout>
 	)
 }
 
